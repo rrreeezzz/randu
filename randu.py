@@ -28,7 +28,7 @@ class Randu(random.Random):
         self._state = state
 
     def random(self):
-        self._state = (65539L * self._state) % 0x80000000
+        self._state = (65539 * self._state) % 0x80000000
         return self._state / float(0x80000000)
 
     @staticmethod
